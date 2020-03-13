@@ -913,43 +913,136 @@ For example, when writing a CSS property, it will tell you what values you can a
 <p>It can be easy to make spelling mistakes when coding, however VS Code does not have in-built spell-checking.
 Let&apos;s install a <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank">spell checker extension</a> which will help reduce the number of errors made coding.</p>
 <h2 id="git">Git</h2>
-<p>TBD</p>
+<p>&#x1F469;&#x200D;&#x1F3EB; Reading this in the class? Turn off your laptop screen and pay attention to the instructor. Ask questions!</p>
+<p>&#x1F3E0; Reading this at home? Click <a href="git-workshop-transcript.md">here</a> to access the full offline Git workshop.</p>
+<h3 id="workshop-exercises">Workshop Exercises</h3>
+<p>You&apos;ll find these in the full guide linked above as well.</p>
+<h4 id="part-1">Part 1</h4>
+<ol>
+<li>Create a new folder with <code>mkdir</code></li>
+<li><code>cd</code> to that folder</li>
+<li>run <code>git init</code></li>
+<li>create a simple CV file</li>
+<li><code>add</code> it to be committed</li>
+<li><code>commit</code> it with a message</li>
+<li>create a cover letter file</li>
+<li><code>add</code> it to be committed</li>
+<li><code>commit</code> it with a message</li>
+<li>now make some changes to both files</li>
+<li><code>add</code> both files to be committed</li>
+<li><code>commit</code> your change with a message</li>
+</ol>
+<h4 id="part-2">Part 2</h4>
+<ol>
+<li>Make some changes to your CV</li>
+<li>use <code>git status</code> and see what appears (notice the red file)</li>
+<li><code>add</code> the CV to be part of the next commit</li>
+<li>use <code>git status</code> again (notice how it&apos;s now green)</li>
+<li><code>commit</code> it with a message</li>
+<li>use <code>git status</code> (there should be no files now)</li>
+<li>change CV again</li>
+<li><code>add</code> it to be part of the next commit</li>
+<li>now change the Cover Letter</li>
+<li>use <code>git status</code> (notice how one is green and one is red)</li>
+<li><code>commit</code> with a message</li>
+<li>use <code>git status</code> (notice how there&apos;s only the red Cover Letter now)</li>
+<li><code>add</code> the Cover Letter and <code>commit</code></li>
+<li>use <code>git status</code> (notice how you have no files)</li>
+<li>use <code>git log</code> to see what changes you made</li>
+</ol>
+<h4 id="part-3">Part 3</h4>
+<ol>
+<li>Go to <a href="https://github.com" target="_blank">https://github.com</a> and create a new account</li>
+<li>Create a new repository</li>
+</ol>
+<p><img alt="CV.txt file selected" src="../assets/git/new-repo.png" width="200"></p>
+<ol>
+<li>Copy the commands it gives you and run them in the terminal</li>
+</ol>
+<p><img alt="CV.txt file selected" src="../assets/git/set-up-remote.png" width="400"></p>
+<ol>
+<li>run <code>git push</code></li>
+</ol>
 <h2 id="introduction-to-programming-2">Introduction to programming 2</h2>
 <h3 id="revising-loops-and-functions">Revising loops and functions</h3>
 <h4 id="group-homework-revision">Group homework revision</h4>
-<p>We&apos;re going to look at <a href="https://studio.code.org/s/course3/stage/6/puzzle/11" target="_blank">https://studio.code.org/s/course3/stage/6/puzzle/11</a> and <a href="https://studio.code.org/s/course3/stage/6/puzzle/12" target="_blank">https://studio.code.org/s/course3/stage/6/puzzle/12</a> together.</p>
+<p>We&apos;re going to look at <a href="https://studio.code.org/s/course3/stage/6/puzzle/11" target="_blank">https://studio.code.org/s/course3/stage/6/puzzle/11</a> together.</p>
 <h3 id="conditionals">Conditionals</h3>
 <p>What makes computers different from all the machines in history that came before them?</p>
 <p>Computers can make decisions.</p>
-<p>This is useful in all sorts of situations. When your phone battery is low, your phone can decide to pop up a message and tell you to plug it in. 
-If you type a word wrongly when you&apos;re writing an email, the spell-checker can decide to draw a squiggly line under it. This is just the tip of 
+<p>This is useful in all sorts of situations. When your phone battery is low, your phone can decide to pop up a message and tell you to plug it in.
+If you type a word wrongly when you&apos;re writing an email, the spell-checker can decide to draw a squiggly line under it. This is just the tip of
 the iceberg: our phones and computers are making decisions all the time, thousands of times a second.</p>
 <p>When we write computer programs, we can tell the computer to make decisions too.</p>
 <p>The word we need is: <strong>if</strong>.</p>
-<p>It works the same way we would use it in conversation if we were telling someone to do something. </p>
+<p>It works the same way we would use it in conversation if we were telling someone to do something.</p>
 <p>&quot;Go to the shops and get a litre of milk. If eggs are half price then buy six.&quot;</p>
 <pre class="language-"><code>go to the shops
 get a litre of milk
 if eggs are half price
 then buy six
-</code></pre><p>There are two different possible outcomes. </p>
+</code></pre><p>There are two different possible outcomes.</p>
 <p>If eggs are half price, we will buy six. If eggs are not half price, we will not buy any.</p>
 <p>We call this a <strong>conditional</strong>. If the condition is met we do something. If it is not met, we don&apos;t.</p>
 <p>What do we mean by condition?</p>
 <p>A condition is something that can be either true or false. It&apos;s something the computer has to check in order to make the decision.</p>
 <p>Which of these things are conditions? (Hint: try to think if it is possible for the sentence to be true or false).</p>
-<p>&quot;It is raining.&quot;
-&quot;Water the plants.&quot;
-&quot;My name is Inigo Montoya.&quot;
-&quot;Wake the mentors up.&quot;
-&quot;The mentors are awake.&quot;</p>
+<ol>
+<li>&quot;It is raining.&quot;</li>
+<li>&quot;Water the plants.&quot;</li>
+<li>&quot;My name is Inigo Montoya.&quot;</li>
+<li>&quot;Wake the mentors up.&quot;</li>
+<li>&quot;The mentors are awake.&quot;</li>
+</ol>
 <h4 id="codeorg-exercises">Code.org exercises</h4>
 <p>Please go to <a href="https://studio.code.org/s/course3/stage/7/puzzle/1" target="_blank">https://studio.code.org/s/course3/stage/7/puzzle/1</a> and do puzzles 1 to 3.</p>
 <h3 id="else">Else</h3>
+<p>Sometimes we want to choose between two different courses of action: we do one thing when the condition is true, and
+another thing when the condition is false.</p>
+<p>To return to the eggs example:</p>
+<pre class="language-"><code>if eggs are half price
+    buy twelve eggs
+else
+    buy six eggs
+</code></pre><p>This is the same as:</p>
+<pre class="language-"><code>if eggs are half price
+    buy twelve eggs
+if eggs are not half price
+    buy six eggs
+</code></pre><p>It is not the same as:</p>
+<pre class="language-"><code>if eggs are half price
+    buy twelve eggs
+
+buy six eggs
+</code></pre><p>What is the difference?</p>
+<h4 id="codeorg-exercises">Code.org exercises</h4>
+<p>Please go to <a href="https://studio.code.org/s/course3/stage/7/puzzle/1" target="_blank">https://studio.code.org/s/course3/stage/7/puzzle/1</a> and do puzzles 4 to 8.</p>
+<h3 id="while-loops">While loops</h3>
+<p>Up until now we&apos;ve used <strong>repeat until</strong>.</p>
+<p>There is no <strong>repeat until</strong> command in JavaScript. Instead we have <strong>while</strong>.</p>
+<p><strong>While</strong> is like <strong>repeat until</strong> but the condition is the other way around.
+Instead of stopping when something is true, we stop when something is not true.</p>
+<p>This makes <strong>while</strong> similar to <strong>if</strong>: if the condition is true, then we
+will carry out the block of commands attached to the <strong>if</strong> or <strong>while</strong>, and if
+it is not true, we don&apos;t.</p>
+<h4 id="codeorg-exercises">Code.org exercises</h4>
+<p>Please go to <a href="https://studio.code.org/s/course3/stage/12/puzzle/1" target="_blank">https://studio.code.org/s/course3/stage/12/puzzle/1</a> and do puzzles 1 to 9.</p>
+<h3 id="solving-problems-with-code">Solving problems with code</h3>
+<p>One of the most important skills to learn as a programmer is to identify when solving
+a problem requires either making a decision or doing the same thing repeatedly.</p>
+<p>Here are some problems to solve - do they require a loop, a conditional, or both?</p>
+<ol>
+<li>Printing all the words in the dictionary starting with the letter K</li>
+<li>Multiplying all the numbers from 1 to 10 together</li>
+<li>Checking if the key the user just pressed was &quot;space&quot;</li>
+<li>Adding up the prices of all the items in an online shopping basket</li>
+<li>Replacing all the occurrences of &quot;teh&quot; in a document with &quot;the&quot;</li>
+<li>Finding out if anyone in the class has a sister who speaks Japanese</li>
+</ol>
 <h2 id="homework">Homework</h2>
 <ol>
-<li>Terminal and Git exercise (TBD repo link to fork)</li>
-<li>Video algorithm recipes (optional)</li>
+<li>Do the nested loop exercises starting at <a href="https://studio.code.org/s/course3/stage/13/puzzle/1" target="_blank">https://studio.code.org/s/course3/stage/13/puzzle/1</a>.</li>
+<li>Do the rest of the debugging exercises starting at <a href="https://studio.code.org/s/course3/stage/14/puzzle/5" target="_blank">https://studio.code.org/s/course3/stage/14/puzzle/5</a>.</li>
 </ol>
 
                                 
@@ -994,7 +1087,7 @@ then buy six
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Week 0.2 - Introduction","level":"1.2.2","depth":2,"next":{"title":"HTML/CSS","level":"1.3","depth":1,"path":"html-css/index.md","ref":"html-css/index.md","articles":[{"title":"Week 1 - Semantic HTML and CSS","level":"1.3.1","depth":2,"path":"html-css/week-01/lesson.md","ref":"html-css/week-01/lesson.md","articles":[]},{"title":"Week 2 - Responsive Web, Layout and Flexbox","level":"1.3.2","depth":2,"path":"html-css/week-02/lesson.md","ref":"html-css/week-02/lesson.md","articles":[]},{"title":"Week 3 - HTML Forms","level":"1.3.3","depth":2,"path":"html-css/week-03/lesson.md","ref":"html-css/week-03/lesson.md","articles":[]}]},"previous":{"title":"Week 0.1 - Introduction","level":"1.2.1","depth":2,"path":"introduction/week-1/lesson.md","ref":"introduction/week-1/lesson.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"introduction/week-2/lesson.md","mtime":"2020-03-06T15:15:38.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-06T15:16:24.516Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Week 0.2 - Introduction","level":"1.2.2","depth":2,"next":{"title":"HTML/CSS","level":"1.3","depth":1,"path":"html-css/index.md","ref":"html-css/index.md","articles":[{"title":"Week 1 - Semantic HTML and CSS","level":"1.3.1","depth":2,"path":"html-css/week-01/lesson.md","ref":"html-css/week-01/lesson.md","articles":[]},{"title":"Week 2 - Responsive Web, Layout and Flexbox","level":"1.3.2","depth":2,"path":"html-css/week-02/lesson.md","ref":"html-css/week-02/lesson.md","articles":[]},{"title":"Week 3 - HTML Forms","level":"1.3.3","depth":2,"path":"html-css/week-03/lesson.md","ref":"html-css/week-03/lesson.md","articles":[]}]},"previous":{"title":"Week 0.1 - Introduction","level":"1.2.1","depth":2,"path":"introduction/week-1/lesson.md","ref":"introduction/week-1/lesson.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"introduction/week-2/lesson.md","mtime":"2020-03-13T14:10:23.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T14:11:09.580Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

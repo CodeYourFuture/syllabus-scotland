@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Week 12 - Recap · GitBook</title>
+        <title>Git workshop · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../node-db/" />
+    <link rel="next" href="../../html-css/" />
     
     
-    <link rel="prev" href="../week-11/lesson.html" />
+    <link rel="prev" href="lesson.html" />
     
 
     </head>
@@ -104,9 +104,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../../introduction/">
+        <li class="chapter " data-level="1.2" data-path="../">
             
-                <a href="../../introduction/">
+                <a href="../">
             
                     
                     Introduction
@@ -118,9 +118,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../introduction/week-1/lesson.html">
+        <li class="chapter " data-level="1.2.1" data-path="../week-1/lesson.html">
             
-                <a href="../../introduction/week-1/lesson.html">
+                <a href="../week-1/lesson.html">
             
                     
                     Week 0.1 - Introduction
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../../introduction/week-2/lesson.html">
+        <li class="chapter " data-level="1.2.2" data-path="lesson.html">
             
-                <a href="../../introduction/week-2/lesson.html">
+                <a href="lesson.html">
             
                     
                     Week 0.2 - Introduction
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../../introduction/week-2/git-workshop-transcript.html">
+        <li class="chapter active" data-level="1.2.3" data-path="git-workshop-transcript.html">
             
-                <a href="../../introduction/week-2/git-workshop-transcript.html">
+                <a href="git-workshop-transcript.html">
             
                     
                     Git workshop
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../">
+        <li class="chapter " data-level="1.6" data-path="../../js-core-3/">
             
-                <a href="../">
+                <a href="../../js-core-3/">
             
                     
                     JavaScript III
@@ -350,9 +350,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../week-10/lesson.html">
+        <li class="chapter " data-level="1.6.1" data-path="../../js-core-3/week-10/lesson.html">
             
-                <a href="../week-10/lesson.html">
+                <a href="../../js-core-3/week-10/lesson.html">
             
                     
                     Week 10 - Unit Tests and TDD
@@ -363,9 +363,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../week-11/lesson.html">
+        <li class="chapter " data-level="1.6.2" data-path="../../js-core-3/week-11/lesson.html">
             
-                <a href="../week-11/lesson.html">
+                <a href="../../js-core-3/week-11/lesson.html">
             
                     
                     Week 11 - More TDD, ES6
@@ -376,9 +376,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.3" data-path="lesson.html">
+        <li class="chapter " data-level="1.6.3" data-path="../../js-core-3/week-12/lesson.html">
             
-                <a href="lesson.html">
+                <a href="../../js-core-3/week-12/lesson.html">
             
                     
                     Week 12 - Recap
@@ -866,7 +866,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Week 12 - Recap</a>
+        <a href="../.." >Git workshop</a>
     </h1>
 </div>
 
@@ -881,42 +881,119 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="https://img.shields.io/badge/status-draft-darkred.svg" alt=""></p>
-<p>To Be Agreed</p>
-<h1 id="js-core-iii">JS Core III</h1>
-<p><strong> What we will learn today?</strong></p>
+                                <h1 id="introduction-to-git">Introduction to Git</h1>
+<p>Let&apos;s say you&apos;re working on an application for a job. You&apos;re inside a folder..</p>
+<p><img alt="Job application folder selected" src="../assets/git/1.png" width="200"></p>
+<p>And create some new files for my CV and cover letter:</p>
+<p><img alt="CV.txt file selected" src="../assets/git/2.png" width="200"></p>
+<p>You add some starting text to both files:</p>
+<p><img alt="CV.txt file selected" src="../assets/git/initial-changes.gif" width="400"></p>
+<p>This is your blank canvas. You are ready to start writing!</p>
+<p>You make a lot of changes to both files. You now have a full cover letter, a full CV, with experience, education etc. But you realise:</p>
 <ul>
-<li>Topic 1</li>
-<li>Topic 2</li>
-<li>Topic 3</li>
-<li>Topic 4</li>
+<li>you have lost your starting &quot;template&quot;, that had a blank CV and cover letter. If you wanted to apply for a new job you would have to re-create the folder again and prepare both files again</li>
+<li>if you make some changes to your CV, save them, turn off your computer, and the next day you realise you don&apos;t need them anymore, it will be really hard to undo them. You need to remember exactly what you changed, and only remove those changes.</li>
 </ul>
-<hr>
-<h2 id="topic-1">Topic 1</h2>
-<p>High level explanation of Topic 1 - rely on the exercises</p>
+<p>What we really want is to save occasional &quot;<a href="https://www.merriam-webster.com/dictionary/snapshot" target="_blank">snapshots</a>&quot;. As we&apos;re working through our job application, we want to take a &quot;photo&quot; of our folder each time we make an important change, so we can go back to it if we need to.</p>
+<p>So let&apos;s say our next task is to add a &quot;Skills&quot; section to our CV. We&apos;ll start by adding some skills, maybe decide to remove some, then add some more skills again, but once we&apos;re done and satisfied that we completed the task, we&apos;ll <a href="https://www.merriam-webster.com/dictionary/commit" target="_blank">commit</a> to being definitely done (which means we can &quot;take a snapshot&quot; of our folder).</p>
 <blockquote>
-<p><strong>Exercise</strong>: Always have exercises</p>
+<p>First word of the day:
+<strong>commit</strong></p>
 </blockquote>
-<h2 id="topic-2">Topic 2</h2>
-<h2 id="topic-3">Topic 3</h2>
-<h1 id="resources">Resources</h1>
+<p>So let&apos;s do that (go <a href="https://youtu.be/YSazjz1IpOc" target="_blank">here</a> to play the video from the beginning):</p>
+<p><img alt="creating git folders" src="../assets/git/creating-folders.gif" width="400"></p>
+<p>As you can see, each time we commit to finishing a task, we create a new folder, give it the name of our task (so we can find it easier), and copy all our files in it.</p>
+<p>We now have these folders:</p>
+<p><img alt="CV.txt file selected" src="../assets/git/3.png" width="250"></p>
+<p>The selected one, <code>job-application</code>, is our <strong>latest</strong> one. It is the one that has all the latest changes and is the most up to date. The other ones, contain different <a href="https://www.merriam-webster.com/dictionary/milestone" target="_blank">milestones</a> of our work, and they&apos;re named accordingly! There&apos;s a folder for our initial template (right before we first started writing) another one for when we added &quot;Education&quot; to our CV etc.</p>
+<p>Now let&apos;s say that while working on our job application, we get a message about an even better job! So we pause our current work, and open our <code>initial-job-application</code> folder so we can adapt our CV and cover letter for the new job.</p>
+<p>Or let&apos;s say we send our CV to a friend to review. They tell us they like everything, except the &quot;Skills&quot; section. So we open up the folder right before we added the skills, copy the files in there to our <code>job-application</code> folder and start again.</p>
+<p>Snapshots are really powerful! They&apos;re like a time machine! The names you give to your folders are also kind of important! (they help you know what is what)</p>
+<hr>
+<p>But each time we finished a task, we&apos;ve been copying ALL of the files to the new folder. What if we&apos;re not ready to copy all files? What if we&apos;ve added a &quot;References&quot; section in our CV, and it looks good, and we also changed the cover letter a bit - but we&apos;re not quite ready to commit the cover letter.</p>
+<p>Well, we can <strong>add</strong> only the files we want to our commit. We&apos;ll copy just the CV to the new folder, and instead of copying the latest version of the cover letter, we&apos;ll just get it from the previous folder we committed.</p>
+<blockquote>
+<p>Our second important word:
+<strong>add</strong></p>
+</blockquote>
+<hr>
+<p>This is all really useful! But a bit annoying to do each time! And we&apos;re going to make a lot more changes - which means A LOT more folders. It will get confusing really fast.</p>
+<p>Would it not be nice if we had a robot we could ask to do all this work for us? We would just tell it anytime we&apos;re ready to commit, and it would create those folders for us, somewhere hidden, where we can&apos;t see them! Something like Alexa, or Siri - <em>&quot;hey Alexa, add these files, I&apos;m ready to commit them!&quot;</em></p>
+<p>Turns out we do, but our robot is called Git. And whenever we want to use Git in a folder, to track our changes, we need to first tell it to initialize in that folder.</p>
+<blockquote>
+<p>So our third important word is:
+<strong>init</strong></p>
+</blockquote>
+<p>To put it all together, the way we&apos;d talk to Git is:</p>
+<pre class="language-"><code>git init
+git add CV.txt
+git commit -m &quot;add skills&quot;
+</code></pre><p>Now it&apos;s your turn:</p>
 <ol>
-<li><a href="https://google.com" target="_blank">Resource 1 to learn more about Topic 1</a></li>
-<li><a href="https://google.com" target="_blank">Resource 2 for Topic 2</a></li>
+<li>Create a new folder with <a href="https://manpages.ubuntu.com/manpages/bionic/en/man1/mkdir.1posix.html" target="_blank"><code>mkdir</code></a></li>
+<li><code>cd</code> to that folder</li>
+<li>run <code>git init</code></li>
+<li>create a simple CV file</li>
+<li><code>add</code> it to be committed</li>
+<li><code>commit</code> it with a message</li>
+<li>create a cover letter file</li>
+<li><code>add</code> it to be committed</li>
+<li><code>commit</code> it with a message</li>
+<li>now make some changes to both files</li>
+<li><code>add</code> both files to be committed</li>
+<li><code>commit</code> your change with a message</li>
 </ol>
-<h1 id="homework">Homework</h1>
+<hr>
+<p>Remember how we created all those directories? They don&apos;t seem to appear here, where is git storing them? Well, when you run <code>git init</code>, Git actually created a hidden folder and puts all your snapshots in there.</p>
+<p>So how can we see what we committed if it&apos;s all hidden away? Try:</p>
+<p><code>git log</code></p>
+<p>You&apos;ll see the list of your commits, in the order you made them!</p>
+<p>How about if you make changes to some files, you&apos;re ready to commit, but you forgot which ones you changed. How do you add them? Try:</p>
+<p><code>git status</code></p>
+<p>You&apos;ll see a list of files. Their colour is important:</p>
+<p><img src="https://placehold.it/15/f03c15/000000?text=+" alt="#f03c15"> <strong>RED</strong> <img src="https://placehold.it/15/f03c15/000000?text=+" alt="#f03c15"> --&gt; they&apos;ve been changed, but are not <em>added</em> yet, so will not be part of the next commit</p>
+<p><img src="https://placehold.it/15/c5f015/000000?text=+" alt="#c5f015"> <strong>GREEN</strong> <img src="https://placehold.it/15/c5f015/000000?text=+" alt="#c5f015"> --&gt; they&apos;ve been changed AND added to be part of the next commit</p>
+<p>So let&apos;s practice:</p>
 <ol>
-<li><p>First part of Homework - Easy</p>
-</li>
-<li><p>Second part of Homework - Intermediate/Hard</p>
-</li>
-<li><p><strong>[Bonus/Optional]</strong> Third part/optional - Hardest</p>
-</li>
+<li>Make some changes to your CV</li>
+<li>use <code>git status</code> and see what appears (notice the red file)</li>
+<li><code>add</code> the CV to be part of the next commit</li>
+<li>use <code>git status</code> again (notice how it&apos;s now green)</li>
+<li><code>commit</code> it with a message</li>
+<li>use <code>git status</code> (there should be no files now)</li>
+<li>change CV again</li>
+<li><code>add</code> it to be part of the next commit</li>
+<li>now change the Cover Letter</li>
+<li>use <code>git status</code> (notice how one is green and one is red)</li>
+<li><code>commit</code> with a message</li>
+<li>use <code>git status</code> (notice how there&apos;s only the red Cover Letter now)</li>
+<li><code>add</code> the Cover Letter and <code>commit</code></li>
+<li>use <code>git status</code> (notice how you have no files)</li>
+<li>use <code>git log</code> to see what changes you made</li>
 </ol>
-<h2 id="prepare-for-the-next-class">Prepare for the next class</h2>
+<hr>
+<p>Finally, let&apos;s share our work with our friends! We&apos;ll use <a href="https://github.com/" target="_blank">GitHub</a> for this.</p>
 <ol>
-<li>Read this <a href="https://google.com" target="_blank">Some Tutorial or Video etc...</a></li>
+<li>Go to <a href="https://github.com" target="_blank">https://github.com</a> and create a new account</li>
+<li>Create a new repository</li>
 </ol>
+<p><img alt="CV.txt file selected" src="../assets/git/new-repo.png" width="200"></p>
+<ol>
+<li>Copy the commands it gives you and run them in the terminal</li>
+</ol>
+<p><img alt="CV.txt file selected" src="../assets/git/set-up-remote.png" width="400"></p>
+<ol>
+<li>run <code>git push</code></li>
+</ol>
+<blockquote>
+<p>And that is the last important word we&apos;ll learn today:
+<strong>push</strong></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>Last Git exercise:</strong>
+Spend 5 minutes to write down what you learned about Git. Use your own words, don&apos;t copy/paste the lesson.</p>
+</blockquote>
 
                                 
                                 </section>
@@ -944,12 +1021,12 @@
 
             
                 
-                <a href="../week-11/lesson.html" class="navigation navigation-prev " aria-label="Previous page: Week 11 - More TDD, ES6">
+                <a href="lesson.html" class="navigation navigation-prev " aria-label="Previous page: Week 0.2 - Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../node-db/" class="navigation navigation-next " aria-label="Next page: Node/DB I">
+                <a href="../../html-css/" class="navigation navigation-next " aria-label="Next page: HTML/CSS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -960,7 +1037,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Week 12 - Recap","level":"1.6.3","depth":2,"next":{"title":"Node/DB I","level":"1.7","depth":1,"path":"node-db/index.md","ref":"node-db/index.md","articles":[{"title":"Week 13 - Node and Express 101","level":"1.7.1","depth":2,"path":"node-db/week-13/lesson.md","ref":"node-db/week-13/lesson.md","articles":[]},{"title":"Week 14 - Middleware, Templating and APIs","level":"1.7.2","depth":2,"path":"node-db/week-14/lesson.md","ref":"node-db/week-14/lesson.md","articles":[]},{"title":"Week 15 - Advanced Node","level":"1.7.3","depth":2,"path":"node-db/week-15/lesson.md","ref":"node-db/week-15/lesson.md","articles":[]}]},"previous":{"title":"Week 11 - More TDD, ES6","level":"1.6.2","depth":2,"path":"js-core-3/week-11/lesson.md","ref":"js-core-3/week-11/lesson.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js-core-3/week-12/lesson.md","mtime":"2020-03-14T10:31:35.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-14T10:32:21.165Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git workshop","level":"1.2.3","depth":2,"next":{"title":"HTML/CSS","level":"1.3","depth":1,"path":"html-css/index.md","ref":"html-css/index.md","articles":[{"title":"Week 1 - Semantic HTML and CSS","level":"1.3.1","depth":2,"path":"html-css/week-01/lesson.md","ref":"html-css/week-01/lesson.md","articles":[]},{"title":"Week 2 - Responsive Web, Layout and Flexbox","level":"1.3.2","depth":2,"path":"html-css/week-02/lesson.md","ref":"html-css/week-02/lesson.md","articles":[]},{"title":"Week 3 - HTML Forms","level":"1.3.3","depth":2,"path":"html-css/week-03/lesson.md","ref":"html-css/week-03/lesson.md","articles":[]}]},"previous":{"title":"Week 0.2 - Introduction","level":"1.2.2","depth":2,"path":"introduction/week-2/lesson.md","ref":"introduction/week-2/lesson.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"introduction/week-2/git-workshop-transcript.md","mtime":"2020-03-14T10:31:35.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-14T10:32:21.165Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
